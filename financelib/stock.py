@@ -1,6 +1,5 @@
-import yfinance as yf # https://pypi.org/project/yfinance/
+import yfinance as yf 
 import pandas as pd
-import numpy as np
 
 class Stock:
     def __init__(self, ticker):
