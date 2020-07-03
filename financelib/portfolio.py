@@ -1,4 +1,4 @@
-from . import stock as st
+import financelib.stock as st
 import pandas as pd
 
 class Portfolio:
@@ -6,7 +6,7 @@ class Portfolio:
         self.tickers = tickers
         
 
-    def portfolioReturns(self, period: string):
+    def portfolioReturns(self, period: str):
         '''
         Creates table of returns based of a list of stock tickers
         :param period: period of returns, i.e. "1d", "1y"
@@ -15,8 +15,8 @@ class Portfolio:
 
         # för varje ticker i portfolion, så läggs tickerns data till i frames.
         for ticker in self.tickers:
-            st = st.Stock(ticker)
-            data = st.returns(period)
+            stock = st.Stock(ticker)
+            data = stock.returns(period)
             # print(data) # ta bort kommentaren här om du vill se hur datan ser ut
             returnsDF.append(data)
 
@@ -26,10 +26,11 @@ class Portfolio:
         portfolio_returns.columns = self.tickers
         return portfolio_returns
 
-    def portfolio_correlation(self):
+    def portfolio_correlation(self, period):
         '''
         returns a correlation table of the portfolio
+        :param period: period of returns, i.e. "1d", "1y"
         '''
-        return self.portfolioReturns.corr()
+        return self.portfolioReturns(period).corr()
 
     
