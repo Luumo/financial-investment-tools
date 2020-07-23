@@ -9,8 +9,8 @@
 ## Analytics: 
 
 ### Equities daily correlation of returns 
-In order to spread risks, diversifying daily returns of equities we use a practice of taking the daily returns of a specified portfolio and check how they are correlated over a specific time period. Preferably over 5 years. 
+- In order to spread risks, diversifying daily returns of equities we use a practice of taking the daily returns of a specified portfolio and check how they are correlated over a specific time period. Preferably over 5 years. 
 
-**The benefit?** We can pick high quality stocks but also be sure that we spread the risks correctly. 
+- **The benefit?** We can pick high quality stocks but also be sure that we spread the risks correctly. 
 
 ### Tool 2
