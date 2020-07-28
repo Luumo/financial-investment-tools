@@ -33,6 +33,16 @@ class Portfolio:
         portfolio_returns = pd.concat(returnsDF, axis=1)
         # byter namn på kolumnerna
         portfolio_returns.columns = self.tickers
-
-        portfolio_returns['Total Portfolio'] = portfolio_returns.iloc[:,0:len(self.holdings)].sum(axis=1) / len(self.holdings)
+        portfolio_returns.fillna(method="ffill", inplace = True)
         return portfolio_returns
+
+    def total_returns(self, period):
+        # creates a series representing total portfolio returns
+        total_ret = self.returns(period).sum(axis=1)
+        total_ret = pd.DataFrame(total_ret, columns=['Portfolio'])
+        return total_ret
+
+
+def merge_dataframes(dataframes: list):
+    concatenate_df = pd.concat(dataframes, axis=1)
+    return concatenate_df
