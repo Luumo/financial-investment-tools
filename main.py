@@ -11,8 +11,7 @@ portfolio_list = ["AMZN", # Amazon
 
 
 my_portfolio = Portfolio(portfolio_list)
-my_portfolio_returns = my_portfolio.portfolioReturns("5y")
-print(my_portfolio_returns)
+my_portfolio_returns = my_portfolio.returns("1y")
 # portfolio_correlation = my_portfolio.portfolio_correlation("5y")
 # print(portfolio_correlation)
 
