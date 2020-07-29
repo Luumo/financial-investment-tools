@@ -7,6 +7,8 @@ class Portfolio:
 
         #create list of holdings based on ticker-list
         self.holdings = list(yf.Ticker(ticker) for ticker in self.tickers)
+        # antal
+        #köp datum
     
     def get_holdings(self):
         '''
