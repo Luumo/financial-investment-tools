@@ -43,10 +43,6 @@ class Portfolio:
         total_ret = self.returns(period).sum(axis=1)
         total_ret = pd.DataFrame(total_ret, columns=['Portfolio'])
         return total_ret
-    
-    def pct_change(self):
-        for stock in self.hodlings:
-            stock.
 
 
 def merge_dataframes(dataframes: list):
